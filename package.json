@@ -1,6 +1,6 @@
 {
   "name": "compute-unzip",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Unzips a zipped array (i.e., a nested array of tuples).",
   "author": {
     "name": "Athan Reines",
