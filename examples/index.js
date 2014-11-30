@@ -13,7 +13,7 @@ for ( var i = 0; i < arr.length; i++ ) {
 		arr[ i ][ j ] = Math.round( Math.random()*Math.pow(10,j) );
 	}
 }
-// Unzip and compute the mean...
+// Unzip and compute the means...
 var out = unzip( arr );
 
 var mu = new Array( len );
