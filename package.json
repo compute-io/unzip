@@ -35,7 +35,9 @@
   "bugs": {
     "url": "https://github.com/compute-io/unzip/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "validate.io-integer": "^1.0.2"
+  },
   "devDependencies": {
     "chai": "1.x.x",
     "compute-mean": "^1.0.1",

@@ -22,7 +22,7 @@ To use the module,
 var unzip = require( 'compute-unzip' );
 ```
 
-#### unzip( arr )
+#### unzip( arr[, idx] )
 
 Unzips a [zipped array](https://github.com/compute-io/zip) (i.e., an `array` where each element is a tuple).
 
@@ -32,6 +32,16 @@ var arr = [ [1,'a',3], [2,'b',4] ];
 var out = unzip( arr );
 // returns [ [1,2], ['a','b'], [3,4] ];
 ```
+
+To unzip specific tuple elements, you can provide an `array` of indices as an optional second argument.
+
+``` javascript
+var arr = [ [1,'a',3], [2,'b',4] ];
+
+var out = unzip( arr, [0,2] );
+// returns [ [1,2], [3,4] ];
+```
+
 
 
 ## Examples
