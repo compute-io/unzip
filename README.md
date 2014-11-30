@@ -24,7 +24,7 @@ var unzip = require( 'compute-unzip' );
 
 #### unzip( arr[, idx] )
 
-Unzips a [zipped array](https://github.com/compute-io/zip) (i.e., an `array` where each element is a tuple).
+Unzips a [zipped array](https://github.com/compute-io/zip) (i.e., a nested `array` of tuples).
 
 ``` javascript
 var arr = [ [1,'a',3], [2,'b',4] ];
