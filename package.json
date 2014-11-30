@@ -1,7 +1,7 @@
 {
   "name": "compute-unzip",
   "version": "0.0.0",
-  "description": "Unzips a zipped array (i.e., an array of tuples).",
+  "description": "Unzips a zipped array (i.e., a nested array of tuples).",
   "author": {
     "name": "Athan Reines",
     "email": "kgryte@gmail.com"
@@ -25,7 +25,12 @@
   "keywords": [
     "compute.io",
     "compute",
-    "computation"
+    "computation",
+    "zip",
+    "unzip",
+    "array",
+    "utilities",
+    "utils"
   ],
   "bugs": {
     "url": "https://github.com/compute-io/unzip/issues"
@@ -33,11 +38,12 @@
   "dependencies": {},
   "devDependencies": {
     "chai": "1.x.x",
-    "mocha": "1.x.x",
+    "compute-mean": "^1.0.1",
     "coveralls": "^2.11.1",
     "istanbul": "^0.3.0",
     "jshint": "2.x.x",
-    "jshint-stylish": "^1.0.0"
+    "jshint-stylish": "^1.0.0",
+    "mocha": "1.x.x"
   },
   "licenses": [
     {

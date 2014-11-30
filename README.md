@@ -1,8 +1,8 @@
-unzip
+Unzip
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
 
-> Unzips a zipped array (i.e., an array of tuples).
+> Unzips a [zipped array](https://github.com/compute-io/zip) (i.e., a nested array of tuples).
 
 
 ## Installation
@@ -19,18 +19,45 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 To use the module,
 
 ``` javascript
-var foo = require( 'compute-unzip' );
+var unzip = require( 'compute-unzip' );
 ```
 
-#### foo( arr )
+#### unzip( arr )
 
-What does this function do?
+Unzips a [zipped array](https://github.com/compute-io/zip) (i.e., an `array` where each element is a tuple).
+
+``` javascript
+var arr = [ [1,'a',3], [2,'b',4] ];
+
+var out = unzip( arr );
+// returns [ [1,2], ['a','b'], [3,4] ];
+```
 
 
 ## Examples
 
 ``` javascript
-var foo = require( 'compute-unzip' );
+var unzip = require( 'compute-unzip' ),
+	mean = require( 'compute-mean' );
+
+// Simulate some data...
+var arr = new Array( 100 ),
+	len = 5;
+
+for ( var i = 0; i < arr.length; i++ ) {
+	arr[ i ] = new Array( len );
+	for ( var j = 0; j < len; j++ ) {
+		arr[ i ][ j ] = Math.round( Math.random()*Math.pow(10,j) );
+	}
+}
+// Unzip and compute the mean...
+var out = unzip( arr );
+
+var mu = new Array( len );
+for ( var k = 0; k < len; k++ ) {
+	mu[ k ] = mean( out[k] );
+}
+console.log( mu.join( '\t' ) );
 ```
 
 To run the example code from the top-level application directory,
@@ -38,6 +65,10 @@ To run the example code from the top-level application directory,
 ``` bash
 $ node ./examples/index.js
 ```
+
+## Notes
+
+This function is complementary to [compute-zip](https://github.com/compute-io/zip) and is inspired by Python's [`zip`](https://docs.python.org/3.3/library/functions.html#zip) function.
 
 
 ## Tests
