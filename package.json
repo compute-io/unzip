@@ -40,7 +40,8 @@
     "url": "https://github.com/compute-io/unzip/issues"
   },
   "dependencies": {
-    "validate.io-integer": "^1.0.2"
+    "validate.io-integer": "^1.0.2",
+    "validate.io-array": "^1.0.3"
   },
   "devDependencies": {
     "chai": "2.x.x",
